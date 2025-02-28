@@ -1,0 +1,53 @@
+name: exploration_node
+
+# Graph node input dimension
+node_dim: 5
+embedding_dim: 256
+obs_padding: 360
+k_nearest_neighbours: 25
+shape_meta: &shape_meta
+  # acceptable types: rgb, low_dim
+  obs:
+    node_resolution: 4.0
+    adjacent_neighbor: 2
+    embedding_dim: ${...embedding_dim}
+    # node_inputs:
+    #   shape: [${obs_padding}, ${node_dim}]
+    # node_padding_mask:
+    #   shape: [1, ${obs_padding}]
+    # edge_mask:
+    #   shape: [${obs_padding}, ${obs_padding}]
+    # current_index:
+    #   shape: [1, 1]
+    # current_edge:
+    #   shape: [${k_nearest_neighbours}, 1]
+    # edge_padding_mask:
+    #   shape: [1, ${k_nearest_neighbours}]
+  action:
+    shape: [2]
+
+# env_runner:
+#   _target_: diffusion_policy.env_runner.pusht_image_runner.PushTImageRunner
+#   n_train: 6
+#   n_train_vis: 2
+#   train_start_seed: 0
+#   n_test: 50
+#   n_test_vis: 4
+#   legacy_test: True
+#   test_start_seed: 100000
+#   max_steps: 300
+#   n_obs_steps: ${n_obs_steps}
+#   n_action_steps: ${n_action_steps}
+#   fps: 10
+#   past_action: ${past_action_visible}
+#   n_envs: null
+
+dataset:
+  _target_: diffusion_policy.dataset.exploration_node_dataset.ExplorationNodeDataset
+  zarr_path: dataset/ground_truth_node_train_4000_aoe-lidar_10itr_gp2/data.zarr
+  horizon: ${horizon}
+  pad_before: ${eval:'${n_obs_steps}-1'}
+  pad_after: ${eval:'${n_action_steps}-1'}
+  seed: 42
+  val_ratio: 0.02
+  max_train_episodes: #90 # None?

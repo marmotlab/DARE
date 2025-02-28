@@ -1,0 +1,11 @@
+**/__pycache__/**
+**/*.zarr/**
+**/results/**
+**/gifs/**
+**/gifs_best/**
+**.pth
+**/DungeonMaps/**
+**/data/**
+**/outputs/**
+**/dataset/**
+**/runs/**
