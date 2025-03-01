@@ -29,11 +29,11 @@ def collision_check(x0, y0, x1, y1, ground_truth, robot_belief):
 
         if x == x1 and y == y1:
             break
-
-        for i in range(-1, 2): # 3x3 aoe sensor to fix discretization error
-            for j in range(-1, 2):
-                if 0 <= y + i < ground_truth.shape[0] and 0 <= x + j < ground_truth.shape[1]:
-                    robot_belief.itemset((y + i, x + j), ground_truth.item(y + i,  x + j))
+        robot_belief.itemset((y, x), k)
+        # for i in range(-1, 2): # 3x3 aoe sensor to fix discretization error
+        #     for j in range(-1, 2):
+        #         if 0 <= y + i < ground_truth.shape[0] and 0 <= x + j < ground_truth.shape[1]:
+        #             robot_belief.itemset((y + i, x + j), ground_truth.item(y + i,  x + j))
 
         if error > 0:
             x += x_inc

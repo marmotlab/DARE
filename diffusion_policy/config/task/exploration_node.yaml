@@ -44,7 +44,7 @@ shape_meta: &shape_meta
 
 dataset:
   _target_: diffusion_policy.dataset.exploration_node_dataset.ExplorationNodeDataset
-  zarr_path: dataset/ground_truth_node_train_4000_aoe-lidar_10itr_gp2/data.zarr
+  zarr_path: dataset/ground_truth_node_train_4000/data.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}

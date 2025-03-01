@@ -8,11 +8,11 @@ TEST_N_AGENTS = 1 # SINGLE AGENT keep it 1
 ## Environment Runner Options
 USE_GPU = False  # do you want to use GPUS?
 NUM_GPU = 0  # the number of GPUs
-NUM_META_AGENT = 2  # the number of processes
+NUM_META_AGENT = 24  # the number of processes
 
-NUM_EPISODES = 4 # number of episodes
+NUM_EPISODES = 4000 # number of episodes
 NUM_RUN = 1
-SAVE_GIFS = True  # do you want to save GIFs
+SAVE_GIFS = False  # do you want to save GIFs
 
 ## Name and Path
 DESCRIPTION = ''
