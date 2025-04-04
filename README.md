@@ -1,5 +1,6 @@
 # DARE
 Code for Diffusion Policy to Autonomous Robotics Exploration (DARE)
+
 Paper available @ https://arxiv.org/abs/2410.16687v1
 
 ## Installation
