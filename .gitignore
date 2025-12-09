@@ -9,4 +9,5 @@
 **/outputs/**
 **/dataset/**
 **/runs/**
-./vscode/**
+**/.vscode/**
+**/**.egg-info/**

@@ -14,20 +14,29 @@
 
 ### Installation
 
-1. **Clone this repository:**:
-    ```bash
-    git clone https://github.com/marmotlab/DARE.git
-    ```
+1. **Create the conda environment**:
 
-2. **Create the conda environment:**:
 	```bash
-	conda env create -f environment.yml -y
+	conda create -n env_dare python=3.12.9 -y
 	```
 
-3. **Activate the environment:**
-    ```bash
-    conda activate env_dare
-    ```
+2. **Activate the environment**:
+
+	```bash
+	conda activate env_dare
+	```
+
+3. **Clone this repository:**
+   ```bash
+   git clone https://github.com/marmotlab/DARE.git
+   ```
+
+4. **Install this repository in editable mode** (from the repo root):
+
+	```bash
+    cd DARE
+	pip install -e .
+	```
 
 ---
 
@@ -129,3 +138,13 @@ If you find this work useful, please consider citing us and the following works:
 ```
 
 We build on the codebase from [Deep Reinforcement Learning-based Large-scale Robot Exploration](https://github.com/marmotlab/large-scale-DRL-exploration) and [Diffusion policy](https://github.com/real-stanford/diffusion_policy).
+
+<!--
+TODO
+1. News / TODO
+2. Intro
+3. Code Structure
+4. Pictures
+5. weights
+6. Emojis
+-->
