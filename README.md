@@ -11,6 +11,8 @@
 
 </div>
 
+---
+
 ## Introduction
 Autonomous robot exploration requires efficient path planning to map unknown environments. While conventional methods are often limited to optimizing based on current beliefs, **DARE (Diffusion Policy for Autonomous Robot Exploration)** leverages the power of generative AI to reason about unknown areas by drawing on learned experiences.
 
