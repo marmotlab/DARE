@@ -18,6 +18,6 @@ SAVE_GIFS = True  # do you want to save GIFs
 ACTION_HORIZON = None # None for 1 horizon
 
 ## Name and Path
-run_path = f'runs/best'
-checkpoint_name = 'epoch=0130-val_loss=0.056.ckpt'
+run_path = f'runs/2025.03.02/17.54.33_train_diffusion_transformer_node_exploration_node'
+checkpoint_name = 'epoch=0130-val_loss=0.059.ckpt'
 gifs_path = f'{run_path}/gifs'
